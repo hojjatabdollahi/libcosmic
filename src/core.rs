@@ -334,6 +334,13 @@ impl Core {
         self.window.height = new_height;
     }
 
+    /// The width of the main window in logical pixels.
+    #[must_use]
+    #[inline]
+    pub const fn window_width(&self) -> f32 {
+        self.window.width
+    }
+
     #[inline]
     /// Set the width of the main window.
     pub(crate) fn set_window_width(&mut self, new_width: f32) {

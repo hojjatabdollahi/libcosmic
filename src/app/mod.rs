@@ -717,7 +717,8 @@ impl<App: Application> ApplicationExt for App {
                         .on_drag(crate::Action::Cosmic(Action::Drag))
                         .on_right_click(crate::Action::Cosmic(Action::ShowWindowMenu))
                         .on_double_click(crate::Action::Cosmic(Action::Maximize))
-                        .is_condensed(is_condensed);
+                        .is_condensed(is_condensed)
+                        .header_width(core.window_width());
 
                     if self.nav_model().is_some() {
                         let toggle = crate::widget::nav_bar_toggle()
